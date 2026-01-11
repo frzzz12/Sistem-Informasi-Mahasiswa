@@ -1,5 +1,6 @@
 <?php 
 
-$conn = mysqli_connect('localhots', 'root', '', 'sistem_informasi_mahasiswa');
+$conn = mysqli_connect('localhost', 'root', '', 'sistem_informasi_mahasiswa');
+
 
 ?>
