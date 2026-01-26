@@ -2,7 +2,7 @@
 require "config/function.php";
 
 $nim = $_GET['nim'];
-$mhs = query{"SELECT * FROM mahasiswa WHERE nim=$nim"};
+$mhs = query("SELECT * FROM mahasiswa WHERE nim='$nim'");
 
 ?>
 
@@ -17,6 +17,8 @@ $mhs = query{"SELECT * FROM mahasiswa WHERE nim=$nim"};
 <body>
     <form action="">
         <input type="text" name="nama" value="<?=$mhs['nama'] ?>">
+        <input type="text" name="nama" value="<?=$mhs['alamat'] ?>">
+        <input type="text" name="nama" value="<?=$mhs['email'] ?>">
 
 
 

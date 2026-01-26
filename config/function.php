@@ -3,12 +3,9 @@ require "database/koneksi.php";
 
 function query($query){
     global$conn;
-    $result = mysqli_query{$conn, $query};
-    $rows = [];
-    while {$row = mysqli_fetch_assoc{$result}}{
-        $rows[]=$row;
-    } 
-    return $rows;
+    $result = mysqli_query($conn, $query);
+    
+    return mysqli_fetch_assoc($result);
 }
 
 
