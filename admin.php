@@ -62,7 +62,7 @@
                       <td><?= $row['alamat']?></td>
                       <td><?= $row['email']?></td>
                       <td><?= $row['nama_jurusan']?></td>
-                      <td><a href="">
+                      <td><a href="edit.php?nim=<?= $row['nim']?>">
                         <i class="fa-solid fa-pen-to-square" style="color: #0d6efd; font-size:1.3rem"></i>
                       </a></td>
                       <td><a href="">
