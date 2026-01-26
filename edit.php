@@ -4,6 +4,19 @@ require "config/function.php";
 $nim = $_GET['nim'];
 $mhs = query("SELECT * FROM mahasiswa WHERE nim='$nim'");
 
+if(isset($_POST['edit'])){
+    if(ubah($_POST) > 0){
+        echo "<script>
+            alert('TERUBAH');
+            document.location.href = 'admin.php';   
+        </script>";
+    }else{
+        echo "<script>
+            alert('TIDAK TERUBAH');
+            document.location.href = 'admin.php';
+        </script>";
+    }
+}
 ?>
 
 
@@ -15,9 +28,12 @@ $mhs = query("SELECT * FROM mahasiswa WHERE nim='$nim'");
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <input type="text" name="nama" value="<?=$mhs['nama'] ?>">
-
+    <form action="" method="post">
+        <input type="hidden" name="nim" value="<?=$mhs['nim'] ?>">
+        <input type="text" name="nama" value="<?=$mhs['nama'] ?>"><br>
+        <input type="text" name="alamat" value="<?=$mhs['alamat'] ?>"><br>
+        <input type="text" name="email" value="<?=$mhs['email'] ?>"><br>
+        <button type="submit" name="edit">Edit</button>
     </form>
 </body>
 </html>
