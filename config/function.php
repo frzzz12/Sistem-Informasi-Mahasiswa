@@ -18,7 +18,8 @@ function ubah($data){
     UPDATE mahasiswa SET
     nama='$nama',
     email='$email',
-    alamat='$alamat'";
+    alamat='$alamat'
+    WHERE nim='$nim'";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
