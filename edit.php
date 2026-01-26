@@ -17,10 +17,6 @@ $mhs = query("SELECT * FROM mahasiswa WHERE nim='$nim'");
 <body>
     <form action="">
         <input type="text" name="nama" value="<?=$mhs['nama'] ?>">
-        <input type="text" name="nama" value="<?=$mhs['alamat'] ?>">
-        <input type="text" name="nama" value="<?=$mhs['email'] ?>">
-
-
 
     </form>
 </body>
