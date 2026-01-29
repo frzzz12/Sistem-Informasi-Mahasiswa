@@ -26,7 +26,7 @@ function ubah($data){
 
 function hapus($data){
     global $conn;
-    mysqli_query($conn, 'DELETE FROM mahasiswa WHERE nim = '$data'');
+    mysqli_query($conn, "DELETE FROM mahasiswa WHERE nim = '$data'");
     return mysqli_affected_rows($conn);
 
 }
