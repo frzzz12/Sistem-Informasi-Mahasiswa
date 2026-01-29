@@ -9,12 +9,12 @@ function query($query){
 }
 
 function ubah($data){
-    global$conn;
-    $nim=$data['nim'];
-    $nama=$data['nama'];
-    $alamat=$data['alamat'];
-    $email=$data['email'];
-    $query="
+    global $conn;
+    $nim = $data['nim'];
+    $nama = $data['nama'];
+    $alamat = $data['alamat'];
+    $email = $data['email'];
+    $query = "
     UPDATE mahasiswa SET
     nama='$nama',
     email='$email',
@@ -22,6 +22,13 @@ function ubah($data){
     WHERE nim='$nim'";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
+}
+
+function hapus($data){
+    global $conn;
+    mysqli_query($conn, 'DELETE FROM mahasiswa WHERE nim = '$data'');
+    return mysqli_affected_rows($conn);
+
 }
 
 ?>
