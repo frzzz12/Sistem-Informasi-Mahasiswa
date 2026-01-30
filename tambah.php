@@ -1,3 +1,26 @@
+<?php
+    require "config/function.php";
+
+    if(isset($_POST['tombol'])){
+        if(tambah($_POST) > 0){
+            echo "<script>
+            alert('TERTAMBAH');
+            document.location.href = 'admin.php';   
+        </script>";
+        }else{
+             echo "<script>
+            alert('TIDAK TERTAMBAH');
+            document.location.href = 'admin.php';
+        </script>";
+        }
+    }
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +35,15 @@
             NIM: <input type="text" name="nim" ><br>
             NAMA: <input type="text" name="nama"><br>
             JENIS KELAMIN: <br>
-            <input type="radio" name="jk" class="form-check-input"> P 
-            <input type="radio" name="jk" class="form-check-input"> L
+            <input type="radio" name="jk" class="form-check-input" value="P"> P 
+            <input type="radio" name="jk" class="form-check-input" value="L"> L
             <br> 
             TANGGAL LAHIR: <input type="date" name="tgl"><br>
             ALAMAT: <input type="text" name="alamat"><br>
             NO HP: <input type="number" name="telpon"><br>
             EMAIL: <input type="text" name="email"><br>
             JURUSAN: <input type="number" name="jurusan"> <br>
-            <button type="submit" class="btn btn-primary fw-semibold">SUBMIT</button>
+            <button type="submit" name="tombol" class="btn btn-primary fw-semibold">SUBMIT</button>
         </form>
     </div>
 

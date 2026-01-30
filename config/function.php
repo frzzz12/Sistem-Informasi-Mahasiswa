@@ -31,4 +31,24 @@ function hapus($data){
 
 }
 
+function tambah($data){
+    global $conn;
+    $nim = $_POST['nim'];
+    $nama = $_POST['nama'];
+    $jkelamin = $_POST['jk'];
+    $tgl = $_POST['tgl'];
+    $alamat = $_POST['alamat'];
+    $nohp = $_POST['telpon'];
+    $email = $_POST['email'];
+    $jurusan = $_POST['jurusan'];
+    }
+
+    $query = "INSERT INTO mahasiswa VALUES 
+    ('$nim', '$nama', '$jkelamin', '$tgl', '$alamat',
+    '$nohp', '$email', '$jurusan'
+    )";
+
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+
 ?>
