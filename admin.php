@@ -43,7 +43,7 @@
       <div class="d-flex align-items-center navbar container-fluid">
         <h2 class="mt-4">Tabel Mahasiswa</h2>
         <div class="mt-4">
-          <a href="" class="btn btn-primary">Tambah Data</a>
+          <a href="tambah.php" class="btn btn-primary">Tambah Data</a>
         </div>
       </div>
       <hr>
