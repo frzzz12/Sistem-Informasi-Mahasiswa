@@ -40,7 +40,12 @@
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <h2 class="mt-4">Tabel Mahasiswa</h2>
+      <div class="d-flex align-items-center navbar container-fluid">
+        <h2 class="mt-4">Tabel Mahasiswa</h2>
+        <div class="mt-4">
+          <a href="" class="btn btn-primary">Tambah Data</a>
+        </div>
+      </div>
       <hr>
       <table class="table table-hover">
           <thead>
