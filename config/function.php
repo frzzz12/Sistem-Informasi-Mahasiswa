@@ -41,8 +41,8 @@ function tambah($data){
     $nohp = $_POST['telpon'];
     $email = $_POST['email'];
     $jurusan = $_POST['jurusan'];
-    }
 
+    
     $query = "INSERT INTO mahasiswa VALUES 
     ('$nim', '$nama', '$jkelamin', '$tgl', '$alamat',
     '$nohp', '$email', '$jurusan'
@@ -50,5 +50,7 @@ function tambah($data){
 
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
+    }
+
 
 ?>
